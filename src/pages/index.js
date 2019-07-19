@@ -1,4 +1,4 @@
-import React from "react";
+<!-- import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
@@ -112,3 +112,4 @@ export const pageQuery = graphql`
     }
   }
 `;
+ -->
