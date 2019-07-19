@@ -1,4 +1,4 @@
-<!-- import React from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
@@ -16,9 +16,6 @@ export const HomePageTemplate = ({ general, left, right, contact, credits }) => 
 class HomePage extends React.Component {
   render() {
     const { data } = this.props;
-    const {
-      data: { footerData, navbarData },
-    } = this.props;
     const { frontmatter: home } = data.homePageData.edges[0].node;
     const {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
@@ -75,6 +72,7 @@ export const pageQuery = graphql`
         }
       }
     }
+    ...LayoutFragment
     homePageData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "home-page" } } }) {
       edges {
         node {
@@ -112,4 +110,3 @@ export const pageQuery = graphql`
     }
   }
 `;
- -->
